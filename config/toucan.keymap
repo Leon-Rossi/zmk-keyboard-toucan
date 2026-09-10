@@ -167,7 +167,7 @@
         numbers {
             display-name = "NUMBERS";
             bindings = <
-                &none  &kp CH_TILD &kp CH_BSLS &kp CH_AT &kp CH_PERC &kp CH_BRKP    &none &none &none &none &none &none
+                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEGR &kp CH_SECT &none
                 &none  &kp CH_1 &kp CH_2 &mt LALT CH_3 &mt LCTRL CH_4 &kp CH_5      &kp CH_6 &mt LCTRL CH_7 &mt LALT CH_8 &kp CH_9 &kp CH_0 &none
                 &none  &kp CH_PLUS &kp CH_MINS &kp CH_ASTR &kp CH_SLSH &kp CH_EQL   &kp CH_QUES &kp CH_EXLM &kp CH_COMM &kp CH_DOT &none &none
                                   &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
@@ -177,10 +177,10 @@
         aeoue {
             display-name = "ÄÖÜ";
             bindings = <
-                &none  &none &none &none &none &none        &none &none &none &none &none &none
-                &none  &kp CH_DQUO &kp CH_UDIA &kp CH_ODIA  &kp CH_ADIA &none   &kp CH_DIAE &trans &trans &none &none &none
-                &none  &none &none &kp DOWN &none &none     &none &none &none &none &none &none
-                            &none &kp LSHIFT &kp LCTRL          &kp LALT &kp SPACE &kp RALT
+                &none  &none &none &none &none &none                        &none &none &none &none &none &none
+                &none  &kp CH_DQUO &kp CH_UDIA &kp CH_ODIA &kp CH_ADIA      &none &none &trans &trans &none &none &none
+                &none  &none &none &kp DOWN &none &none                     &none &none &none &none &none &none
+                            &none &kp LSHIFT &kp LCTRL                          &kp LALT &kp SPACE &kp RALT
             >;
         };
 
@@ -197,7 +197,7 @@
         symbols {
             display-name = "SYMBOLS";
             bindings = <
-                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEGR &kp CH_SECT &none
+                &none  &kp CH_TILD &kp CH_BSLS &kp CH_AT &kp CH_PERC &kp CH_SECT    &none &none &none &none &none &none
                 &none  &kp CH_LABK &kp CH_LBRC &kp CH_LCBR &kp CH_LPRN &kp CH_DQUO      &kp CH_QUOT &kp CH_RPRN &kp CH_RCBR &kp CH_RBRC &kp CH_RABK &none
                 &none  &none &kp CH_UNDS &none &none &none                              &none &none &none &none &none &none
                                 &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
