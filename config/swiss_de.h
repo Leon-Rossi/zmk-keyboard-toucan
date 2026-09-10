@@ -31,16 +31,16 @@
 #define CH_M M
 
 // --- Top Row Numbers & Symbols (Shift + Number) ---
-#define CH_N1 N1       // 1
-#define CH_N2 N2       // 2
-#define CH_N3 N3       // 3
-#define CH_N4 N4       // 4
-#define CH_N5 N5       // 5
-#define CH_N6 N6       // 6
-#define CH_N7 N7       // 7
-#define CH_N8 N8       // 8
-#define CH_N9 N9       // 9
-#define CH_N0 N0       // 0
+#define CH_1 N1       // 1
+#define CH_2 N2       // 2
+#define CH_3 N3       // 3
+#define CH_4 N4       // 4
+#define CH_5 N5       // 5
+#define CH_6 N6       // 6
+#define CH_7 N7       // 7
+#define CH_8 N8       // 8
+#define CH_9 N9       // 9
+#define CH_0 N0       // 0
 
 #define CH_EXLM LS(N1)    // !
 #define CH_DQUO LS(N2)    // "

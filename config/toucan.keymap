@@ -197,7 +197,7 @@
         symbols {
             display-name = "SYMBOLS";
             bindings = <
-                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEG &kp CH_SECT &none
+                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEGR &kp CH_SECT &none
                 &none  &kp CH_LABK &kp CH_LBRC &kp CH_LCBR &kp CH_LPRN &kp CH_DQUO      &kp CH_QUOT &kp CH_RPRN &kp CH_RCBR &kp CH_RBRC &kp CH_RABK &none
                 &none  &none &kp CH_UNDS &none &none &none                              &none &none &none &none &none &none
                                 &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
