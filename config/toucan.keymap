@@ -151,67 +151,67 @@
 
     // Keymap
 
-keymap {
+    keymap {
+        compatible = "zmk,keymap";
 
-    compatible = "zmk,keymap";
+        base {
+            display-name = "BASE";
+            bindings = <
+                &none   &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T        &kp CH_Z &kp CH_U &kp CH_I    &kp CH_O   &kp CH_P   &tog GAMING
+                &kp ESC &kp CH_A &kp CH_S &hml LALT CH_D &hml LCTRL CH_F    &kp CH_G &kp CH_H &hmr LCTRL CH_J &hmr LALT CH_K &kp CH_L &shift_semicolon &none
+                &none   &ctrl_y_undo &kp CH_X &kp CH_C &kp CH_V &kp CH_B    &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &tog GAMING
+                                  &mo NUMBERS &kp LSHIFT &kp BACKSPACE          &mo SYMBOLS &shift_space &kp ENTER
+            >;
+        };
 
-    base {
-        display-name = "BASE";
-        bindings = <
-            &none   &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T        &kp CH_Z &kp CH_U &kp CH_I    &kp CH_O   &kp CH_P   &tog GAMING
-            &kp ESC &kp CH_A &kp CH_S &hml LALT CH_D &hml LCTRL CH_F    &kp CH_G &kp CH_H &hmr LCTRL CH_J &hmr LALT CH_K &kp CH_L &shift_semicolon &none
-            &none   &ctrl_y_undo &kp CH_X &kp CH_C &kp CH_V &kp CH_B    &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &tog GAMING
-                              &mo NUMBERS &kp LSHIFT &kp BACKSPACE          &mo SYMBOLS &shift_space &kp ENTER
-        >;
-    };
+        numbers {
+            display-name = "NUMBERS";
+            bindings = <
+                &none  &kp CH_TILD &kp CH_BSLS &kp CH_AT &kp CH_PERC &kp CH_BRKP    &none &none &none &none &none &none
+                &none  &kp CH_1 &kp CH_2 &mt LALT CH_3 &mt LCTRL CH_4 &kp CH_5      &kp CH_6 &mt LCTRL CH_7 &mt LALT CH_8 &kp CH_9 &kp CH_0 &none
+                &none  &kp CH_PLUS &kp CH_MINS &kp CH_ASTR &kp CH_SLSH &kp CH_EQL   &kp CH_QUES &kp CH_EXLM &kp CH_COMM &kp CH_DOT &none &none
+                                  &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
+            >;
+        };
 
-    numbers {
-        display-name = "NUMBERS";
-        bindings = <
-            &none  &kp CH_TILD &kp CH_BSLS &kp CH_AT &kp CH_PERC &kp CH_BRKP    &none &none &none &none &none &none
-            &none  &kp CH_1 &kp CH_2 &mt LALT CH_3 &mt LCTRL CH_4 &kp CH_5      &kp CH_6 &mt LCTRL CH_7 &mt LALT CH_8 &kp CH_9 &kp CH_0 &none
-            &none  &kp CH_PLUS &kp CH_MINS &kp CH_ASTR &kp CH_SLSH &kp CH_EQL   &kp CH_QUES &kp CH_EXLM &kp CH_COMM &kp CH_DOT &none &none
-                              &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
-        >;
-    };
+        aeoue {
+            display-name = "ÄÖÜ";
+            bindings = <
+                &none  &none &none &none &none &none        &none &none &none &none &none &none
+                &none  &kp CH_DQUO &kp CH_UDIA &kp CH_ODIA  &kp CH_ADIA &none   &kp CH_DIAE &trans &trans &none &none &none
+                &none  &none &none &kp DOWN &none &none     &none &none &none &none &none &none
+                            &none &kp LSHIFT &kp LCTRL          &kp LALT &kp SPACE &kp RALT
+            >;
+        };
 
-    aeoue {
-        display-name = "ÄÖÜ";
-        bindings = <
-            &none  &none &none &none &none &none        &none &none &none &none &none &none
-            &none  &kp CH_DQUO &kp CH_UDIA &kp CH_ODIA  &kp CH_ADIA &none   &kp CH_DIAE &trans &trans &none &none &none
-            &none  &none &none &kp DOWN &none &none     &none &none &none &none &none &none
-                        &none &kp LSHIFT &kp LCTRL          &kp LALT &kp SPACE &kp RALT
-        >;
-    };
+        arrows {
+            display-name = "ARROWS";
+            bindings = <
+                &none  &none &none &none &none &none            &kp CH_AT &none &none &none &none &none
+                &none  &none &kp TAB &trans &trans &none        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TAB &none
+                &none  &none &none &none &none &none &none      &none &none &none &none &none
+                            &none &kp LSHIFT &kp LCTRL              &kp LALT &kp SPACE &kp RALT
+            >;
+        };
 
-    arrows {
-        display-name = "ARROWS";
-        bindings = <
-            &none  &none &none &none &none &none            &kp CH_AT &none &none &none &none &none
-            &none  &none &kp TAB &trans &trans &none        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TAB &none
-            &none  &none &none &none &none &none &none      &none &none &none &none &none
-                        &none &kp LSHIFT &kp LCTRL              &kp LALT &kp SPACE &kp RALT
-        >;
-    };
+        symbols {
+            display-name = "SYMBOLS";
+            bindings = <
+                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEG &kp CH_SECT &none
+                &none  &kp CH_LABK &kp CH_LBRC &kp CH_LCBR &kp CH_LPRN &kp CH_DQUO      &kp CH_QUOT &kp CH_RPRN &kp CH_RCBR &kp CH_RBRC &kp CH_RABK &none
+                &none  &none &kp CH_UNDS &none &none &none                              &none &none &none &none &none &none
+                                &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
+            >;
+        };
 
-    symbols {
-        display-name = "SYMBOLS";
-        bindings = <
-            &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEG &kp CH_SECT &none
-            &none  &kp CH_LABK &kp CH_LBRC &kp CH_LCBR &kp CH_LPRN &kp CH_DQUO      &kp CH_QUOT &kp CH_RPRN &kp CH_RCBR &kp CH_RBRC &kp CH_RABK &none
-            &none  &none &kp CH_UNDS &none &none &none                              &none &none &none &none &none &none
-                            &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
-        >;
-    };
-
-    gaming {
-        display-name = "GAMING";
-        bindings = <
-            &kp ESC &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T   &kp CH_Z &kp CH_U &kp CH_I &kp CH_O &kp CH_P &trans
-            &kp TAB &kp CH_A &kp CH_S &kp CH_D &kp CH_F &kp CH_G   &kp CH_H &kp CH_J &kp CH_K &kp CH_L &kp CH_SCLN &none
-            &none &kp CH_Y &kp CH_X &kp CH_C &kp CH_V &kp CH_B     &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &trans
-                            &kp ENTER &kp LSHIFT &kp SPACE            &kp LALT &kp LCTRL &kp ENTER
-        >;
+        gaming {
+            display-name = "GAMING";
+            bindings = <
+                &kp ESC &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T   &kp CH_Z &kp CH_U &kp CH_I &kp CH_O &kp CH_P &trans
+                &kp TAB &kp CH_A &kp CH_S &kp CH_D &kp CH_F &kp CH_G   &kp CH_H &kp CH_J &kp CH_K &kp CH_L &kp CH_SCLN &none
+                &none &kp CH_Y &kp CH_X &kp CH_C &kp CH_V &kp CH_B     &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &trans
+                                &kp ENTER &kp LSHIFT &kp SPACE            &kp LALT &kp LCTRL &kp ENTER
+            >;
+        };
     };
 };
