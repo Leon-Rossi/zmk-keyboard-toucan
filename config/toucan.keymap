@@ -1,74 +1,281 @@
+#include "swiss_de.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
-#define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
+// Layer numbers
+
+#define BASE        0
+#define NUMBERS     1
+#define AEOUE       2
+#define ARROWS      3
+#define SYMBOLS     4
+#define GAMING      5
+
+
+// Custom behaviors
+
+&mt {
+    tapping-term-ms = <200>;
+};
+
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+    behaviors {
+
+        // Home-row mods: left hand
+
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+
+            bindings = <&kp>, <&kp>;
+
+            /*
+             * Right-hand key positions.
+             *
+             * Base-layer positions:
+             *
+             *   17 H
+             *   18 J
+             *   19 K
+             *   20 L
+             *   21 ;
+             *   22 NO
+             *
+             *   23 Y
+             *   24 X
+             *   25 C
+             *   26 V
+             *   27 B
+             *
+             *   28 N
+             *   29 M
+             *   30 ,
+             *   31 .
+             *   32 /
+             *   33 Gaming
+             *
+             *   34-36 right thumb cluster
+             */
+            hold-trigger-key-positions =
+                <17 18 19 20 21 22
+                 23 24 25 26 27
+                 28 29 30 31 32 33
+                 34 35 36>;
+
+            hold-trigger-on-release;
+        };
+
+
+         // Home-row mods: right hand
+
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+
+            bindings = <&kp>, <&kp>;
+
+            /*
+             * Left-hand key positions.
+             *
+             *   0-5   Q W E R T ...
+             *   12 A
+             *   13 S
+             *   14 D
+             *   15 F
+             *   16 G
+             *   23 ...
+             *   34-36 left thumb cluster
+             */
+            hold-trigger-key-positions =
+                <0 1 2 3 4 5
+                 12 13 14 15 16
+                 23 24 25 26 27
+                 34 35 36>;
+
+            hold-trigger-on-release;
+        };
+
+
+        // Shift + Space -> Tab
+
+        shift_space: shift_space {
+            compatible = "zmk,behavior-mod-morph";
+
+            #binding-cells = <0>;
+
+            bindings = <&kp SPACE>, <&kp TAB>;
+
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+
+        // Shift + semicolon -> colon
+
+        shift_semicolon: shift_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+
+            #binding-cells = <0>;
+
+            bindings = <&kp CH_SCLN>, <&kp CH_COLN>;
+
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+
+        // Ctrl + Y -> Ctrl + Z
+
+        ctrl_y_undo: ctrl_y_undo {
+            compatible = "zmk,behavior-mod-morph";
+
+            #binding-cells = <0>;
+
+            bindings = <&kp CH_Y>, <&kp LC(Z)>;
+
+            mods = <(MOD_LCTL | MOD_RCTL)>;
+
+            keep-mods = <(MOD_LCTL | MOD_RCTL)>;
         };
     };
 
-    keymap {
-        compatible = "zmk,keymap";
 
-        base {
-            display-name = "BASE";
-            bindings = <
-                &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-            >;
-        };
+    /*
+     * =========================================================================
+     * Combos
+     * =========================================================================
+     */
 
-        nav {
-            display-name = "NAV";
-            bindings = <
-                &kp TAB     &kp N1          &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-                &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-                &kp LSHFT   &studio_unlock  &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                                &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-            >;
-        };
+    combos {
 
-        sym {
-            display-name = "SYM";
-            bindings = <
-                &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-                &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                                          &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-            >;
+        compatible = "zmk,combos";
+
+
+        // D + F -> momentary Arrows layer
+
+        combo_df_arrows {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
+
+            key-positions = <14 15>;
+
+            bindings = <&mo ARROWS>;
         };
 
-        adj {
-            display-name = "ADJ";
-            bindings = <
-                &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F12   &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &trans &trans &kp BSPC
-                &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11   &trans       &trans      &trans       &trans &trans &trans
-                &bt LSHFT &trans &kp F1 &kp F2 &kp F3 &kp F10   &trans       &trans      &trans       &trans &trans &trans
-                                   &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
-            >;
-        };
-        extra_1 {
-                status = "reserved";
+
+        //  J + K -> momentary ÄÖÜ layer
+
+        combo_jk_aeoue {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
+
+            key-positions = <18 19>;
+
+            bindings = <&mo AEOUE>;
         };
 
-        extra_2 {
-                status = "reserved";
+
+        // S + D -> GUI
+
+        combo_sd_gui {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
+
+            key-positions = <13 14>;
+
+            bindings = <&kp LGUI>;
         };
 
-        extra_3 {
-                status = "reserved";
+
+        //  K + L -> GUI
+
+        combo_kl_gui {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
+
+            key-positions = <19 20>;
+
+            bindings = <&kp LGUI>;
         };
+    };
+
+
+    // Keymap
+
+keymap {
+
+    compatible = "zmk,keymap";
+
+    base {
+        display-name = "BASE";
+        bindings = <
+            &none   &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T        &kp CH_Z &kp CH_U &kp CH_I    &kp CH_O   &kp CH_P   &tog GAMING
+            &kp ESC &kp CH_A &kp CH_S &hml LALT CH_D &hml LCTRL CH_F    &kp CH_G &kp CH_H &hmr LCTRL CH_J &hmr LALT CH_K &kp CH_L &shift_semicolon &none
+            &none   &ctrl_y_undo &kp CH_X &kp CH_C &kp CH_V &kp CH_B    &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &tog GAMING
+                              &mo NUMBERS &kp LSHIFT &kp BACKSPACE          &mo SYMBOLS &shift_space &kp ENTER
+        >;
+    };
+
+    numbers {
+        display-name = "NUMBERS";
+        bindings = <
+            &none  &kp CH_TILD &kp CH_BSLS &kp CH_AT &kp CH_PERC &kp CH_BRKP    &none &none &none &none &none &none
+            &none  &kp CH_1 &kp CH_2 &mt LALT CH_3 &mt LCTRL CH_4 &kp CH_5      &kp CH_6 &mt LCTRL CH_7 &mt LALT CH_8 &kp CH_9 &kp CH_0 &none
+            &none  &kp CH_PLUS &kp CH_MINS &kp CH_ASTR &kp CH_SLSH &kp CH_EQL   &kp CH_QUES &kp CH_EXLM &kp CH_COMM &kp CH_DOT &none &none
+                              &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
+        >;
+    };
+
+    aeoue {
+        display-name = "ÄÖÜ";
+        bindings = <
+            &none  &none &none &none &none &none        &none &none &none &none &none &none
+            &none  &kp CH_DQUO &kp CH_UDIA &kp CH_ODIA  &kp CH_ADIA &none   &kp CH_DIAE &trans &trans &none &none &none
+            &none  &none &none &kp DOWN &none &none     &none &none &none &none &none &none
+                        &none &kp LSHIFT &kp LCTRL          &kp LALT &kp SPACE &kp RALT
+        >;
+    };
+
+    arrows {
+        display-name = "ARROWS";
+        bindings = <
+            &none  &none &none &none &none &none            &kp CH_AT &none &none &none &none &none
+            &none  &none &kp TAB &trans &trans &none        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TAB &none
+            &none  &none &none &none &none &none &none      &none &none &none &none &none
+                        &none &kp LSHIFT &kp LCTRL              &kp LALT &kp SPACE &kp RALT
+        >;
+    };
+
+    symbols {
+        display-name = "SYMBOLS";
+        bindings = <
+            &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEG &kp CH_SECT &none
+            &none  &kp CH_LABK &kp CH_LBRC &kp CH_LCBR &kp CH_LPRN &kp CH_DQUO      &kp CH_QUOT &kp CH_RPRN &kp CH_RCBR &kp CH_RBRC &kp CH_RABK &none
+            &none  &none &kp CH_UNDS &none &none &none                              &none &none &none &none &none &none
+                            &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
+        >;
+    };
+
+    gaming {
+        display-name = "GAMING";
+        bindings = <
+            &kp ESC &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T   &kp CH_Z &kp CH_U &kp CH_I &kp CH_O &kp CH_P &trans
+            &kp TAB &kp CH_A &kp CH_S &kp CH_D &kp CH_F &kp CH_G   &kp CH_H &kp CH_J &kp CH_K &kp CH_L &kp CH_SCLN &none
+            &none &kp CH_Y &kp CH_X &kp CH_C &kp CH_V &kp CH_B     &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &trans
+                            &kp ENTER &kp LSHIFT &kp SPACE            &kp LALT &kp LCTRL &kp ENTER
+        >;
     };
 };
