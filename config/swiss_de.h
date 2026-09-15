@@ -34,62 +34,57 @@
 #define CH_1 N1       // 1
 #define CH_2 N2       // 2
 #define CH_3 N3       // 3
-#define CH_4 N4       // 4
-#define CH_5 N5       // 5
-#define CH_6 N6       // 6
+#define CH_4 N4       // 4 #define CH_5 N5       // 5 #define CH_6 N6       // 6
 #define CH_7 N7       // 7
 #define CH_8 N8       // 8
 #define CH_9 N9       // 9
 #define CH_0 N0       // 0
 
-#define CH_PLUS LS(N1)    // +
-#define CH_DQUO LS(N2)    // "
-#define CH_ASTR LS(N3)    // * (Note: some layouts use LS(BSLH), but SG is LS(N3))
-#define CH_PND  LS(N4)    // ç (French/Swiss) or $
-#define CH_PERC LS(N5)    // %
-#define CH_AMPR LS(N6)    // &
-#define CH_SLSH LS(N7)    // /
-#define CH_LPRN LS(N8)    // (
-#define CH_RPRN LS(N9)    // )
-#define CH_EQL  LS(N0)    // =
-#define CH_UNDS LS(MINUS) // ?
+#define CH_SECT GRV  // §
 #define CH_QUOT MINUS // '
-
-// --- Special Swiss Characters (Umlauts) ---
-#define CH_UDIA LBKT            // ü
-#define CH_ODIA SEMI            // ö
-#define CH_ADIA QUOT            // ä
-#define CH_EACU LS(LBKT)        // è
-#define CH_EGRV LS(SEMI)        // é
-#define CH_AGRV LS(QUOT)        // à
-
-// --- Punctuation and Symbols ---
-#define CH_SCLN LS(COMMA)       // ;
-#define CH_COLN LS(DOT)         // :
-#define CH_QUES LS(SLASH)       // _
-#define CH_DOT  DOT             // .
-#define CH_COMM COMMA           // ,
-#define CH_MINS MINUS           // -
-#define CH_EXLM PLUS            // +
-#define CH_LABK NON_US_BSLH     // <
-#define CH_RABK LS(NON_US_BSLH) // >
-#define CH_SECT LS(N4)          // §
-#define CH_DEGR LS(GRAVE)       // °
-#define CH_CIRC GRAVE           // ^
-
-// --- AltGr (Right Alt) Combinations ---
-#define CH_AT   RA(N2)          // @
-#define CH_HASH RA(N3)          // #
-#define CH_EURO RA(E)           // €
-#define CH_LBRC RA(LBKT)        // [
-#define CH_RBRC RA(N9)          // ]
-#define CH_LCBR RA(SINGLE_QUOTE)// {
-#define CH_RCBR RA(BACKSLASH)   // }
-#define CH_PIPE RA(N7)          // |
-#define CH_BSLS RA(LS(N7))      // \ (Backslash)
-#define CH_TILD RA(BSLH)        // ~
-#define CH_MICR RA(M)           // µ
-
-// --- Dead Keys (Careful with these in ZMK) ---
-#define CH_ACUT EQUAL           // ´ (Dead key)
-#define CH_GRAV LS(EQUAL)       // ` (Dead key)
+#define CH_CIRC EQUAL  // ^ (dead)
+#define CH_UDIA LBRC // ü
+#define CH_DIAE RBRC // ¨ (dead)
+#define CH_ODIA SCLN // ö
+#define CH_ADIA QUOT // ä
+#define CH_DLR  KC_NUHS // $
+#define CH_LABK KC_NUBS // <
+#define CH_COMM COMMA // ,
+#define CH_DOT  DOT  // .
+#define CH_MINS SLASH // -
+#define CH_DEG  S(CH_SECT) // °
+#define CH_PLUS S(CH_1)    // +
+#define CH_DQUO S(CH_2)    // "
+#define CH_ASTR S(CH_3)    // *
+#define CH_CCED S(CH_4)    // ç
+#define CH_PERC S(CH_5)    // %
+#define CH_AMPR S(CH_6)    // &
+#define CH_SLSH S(CH_7)    // /
+#define CH_LPRN S(CH_8)    // (
+#define CH_RPRN S(CH_9)    // )
+#define CH_EQL  S(CH_0)    // =
+#define CH_QUES S(CH_QUOT) // ?
+#define CH_GRV  S(CH_CIRC) // ` (dead)
+#define CH_EGRV S(CH_UDIA) // è
+#define CH_EXLM S(CH_DIAE) // !
+#define CH_EACU S(CH_ODIA) // é
+#define CH_AGRV S(CH_ADIA) // à
+#define CH_PND  S(CH_DLR)  // £
+#define CH_RABK S(CH_LABK) // >
+#define CH_SCLN S(CH_COMM) // ;
+#define CH_COLN S(CH_DOT)  // :
+#define CH_UNDS S(CH_MINS) // _
+#define CH_BRKP ALGR(CH_1)    // ¦
+#define CH_AT   ALGR(CH_2)    // @
+#define CH_HASH ALGR(CH_3)    // #
+#define CH_NOT  ALGR(CH_6)    // ¬
+#define CH_PIPE ALGR(CH_7)    // |
+#define CH_CENT ALGR(CH_8)    // ¢
+#define CH_ACUT ALGR(CH_QUOT) // ´ (dead)
+#define CH_TILD ALGR(CH_CIRC) // ~ (dead)
+#define CH_EURO ALGR(CH_E)    // €
+#define CH_LBRC ALGR(CH_UDIA) // [
+#define CH_RBRC ALGR(CH_DIAE) // ]
+#define CH_LCBR ALGR(CH_ADIA) // {
+#define CH_RCBR ALGR(CH_DLR)  // }
+#define CH_BSLS ALGR(CH_LABK) // (backslash)
