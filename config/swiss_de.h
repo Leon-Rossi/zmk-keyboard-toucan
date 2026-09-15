@@ -57,7 +57,7 @@
 #define CH_MINS SLASH     // -
 
 // --- Shifted Symbols ---
-#define CH_DEG  LS(GRAVE)    // °
+#define CH_DEGR LS(GRAVE)    // °
 #define CH_PLUS LS(N1)       // +
 #define CH_DQUO LS(N2)       // "
 #define CH_ASTR LS(N3)       // *
@@ -68,7 +68,7 @@
 #define CH_LPRN LS(N8)       // (
 #define CH_RPRN LS(N9)       // )
 #define CH_EQL  LS(N0)       // =
-#define CH_QUES LS(QOTE)     // ?
+#define CH_QUES LS(QUOTE)     // ?
 #define CH_GRV  LS(EQUAL)    // `
 #define CH_EGRV LS(LBRC)    // è
 #define CH_EXLM LS(RBRC)    // !
