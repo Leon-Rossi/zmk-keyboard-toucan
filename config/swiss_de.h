@@ -69,8 +69,8 @@
 #define CH_UNDS LS(SLASH)       // _
 #define CH_DOT  DOT             // .
 #define CH_COMM COMMA           // ,
-#define CH_MINS SLASH           // -
-#define CH_PLUS PLUS            // +
+#define CH_MINS SLAS
+#define CH_EXLM PLUS            // +
 #define CH_LABK NON_US_BSLH     // <
 #define CH_RABK LS(NON_US_BSLH) // >
 #define CH_SECT LS(N4)          // §
