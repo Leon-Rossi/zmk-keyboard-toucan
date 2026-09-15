@@ -126,7 +126,7 @@
         combo_df_arrows {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            bindings = <&mo ARROWS>
+            bindings = <&mo ARROWS>;
         };
 
         combo_jk_aeoue {
