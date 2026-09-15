@@ -42,7 +42,7 @@
 #define CH_9 N9       // 9
 #define CH_0 N0       // 0
 
-#define CH_EXLM LS(N1)    // !
+#define CH_PLUS LS(N1)    // +
 #define CH_DQUO LS(N2)    // "
 #define CH_ASTR LS(N3)    // * (Note: some layouts use LS(BSLH), but SG is LS(N3))
 #define CH_PND  LS(N4)    // ç (French/Swiss) or $
@@ -52,8 +52,8 @@
 #define CH_LPRN LS(N8)    // (
 #define CH_RPRN LS(N9)    // )
 #define CH_EQL  LS(N0)    // =
-#define CH_QUES LS(MINUS) // ?
-#define CH_QUOT LS(NON_US_HASH) // '
+#define CH_UNDS LS(MINUS) // ?
+#define CH_QUOT MINUS // '
 
 // --- Special Swiss Characters (Umlauts) ---
 #define CH_UDIA LBKT            // ü
@@ -81,7 +81,7 @@
 #define CH_AT   RA(N2)          // @
 #define CH_HASH RA(N3)          // #
 #define CH_EURO RA(E)           // €
-#define CH_LBRC RA(N8)          // [
+#define CH_LBRC RA(LBKT)        // [
 #define CH_RBRC RA(N9)          // ]
 #define CH_LCBR RA(SINGLE_QUOTE)// {
 #define CH_RCBR RA(BACKSLASH)   // }
