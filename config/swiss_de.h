@@ -66,10 +66,10 @@
 // --- Punctuation and Symbols ---
 #define CH_SCLN LS(COMMA)       // ;
 #define CH_COLN LS(DOT)         // :
-#define CH_UNDS LS(SLASH)       // _
+#define CH_QUES LS(SLASH)       // _
 #define CH_DOT  DOT             // .
 #define CH_COMM COMMA           // ,
-#define CH_MINS SLAS
+#define CH_MINS MINUS           // -
 #define CH_EXLM PLUS            // +
 #define CH_LABK NON_US_BSLH     // <
 #define CH_RABK LS(NON_US_BSLH) // >
