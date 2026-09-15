@@ -170,8 +170,8 @@
             display-name = "NUMBERS";
             bindings = <
                 &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEGR &kp CH_SECT &none
-                &none  &kp CH_1 &kp CH_2 &mt LALT CH_3 &mt LCTRL CH_4 &kp CH_5      &kp CH_6 &mt LCTRL CH_7 &mt LALT CH_8 &kp CH_9 &kp CH_0 &none
-                &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &none &none
+                &none  &kp CH_1 &kp CH_2 &kp CH_3 &kp CH_4 &kp CH_5      &kp CH_6 &kp CH_7 &kp CH_8 &kp CH_9 &kp CH_0 &none
+                &none  &kp CH_PLUS &kp CH_MINS &kp CH_ASTR &kp CH_SLSH &kp CH_EQL   &kp CH_QUES &kp CH_EXLM &kp CH_COMM &kp CH_DOT &none &none
                                   &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
             >;
         };
@@ -191,7 +191,7 @@
             bindings = <
                 &none  &none &none &none &none &none            &kp CH_AT &none &none &none &none &none
                 &none  &none &kp TAB &trans &trans &none        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TAB &none
-                &none  &none &none &none &none &none &none      &none &none &none &none &none
+                &none  &none &none &none &none &none            &none &none &none &none &none &none
                             &none &kp LSHIFT &kp LCTRL              &kp LALT &kp SPACE &kp RALT
             >;
         };
