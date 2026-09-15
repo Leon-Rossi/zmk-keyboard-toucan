@@ -161,41 +161,27 @@
             bindings = <
                 &none   &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T        &kp CH_Z &kp CH_U &kp CH_I    &kp CH_O   &kp CH_P   &tog GAMING
                 &kp ESC &kp CH_A &kp CH_S &hml LALT CH_D &hml LCTRL CH_F    &kp CH_G &kp CH_H &hmr LCTRL CH_J &hmr LALT CH_K &kp CH_L &shift_semicolon &none
-                &none   &ctrl_y_undo &kp CH_X &kp CH_C &kp CH_V &kp CH_B    &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &tog GAMING
-                                  &mo NUMBERS &kp LSHIFT &kp BACKSPACE          &mo SYMBOLS &shift_space &kp ENTER
+                &none   &ctrl_y_undo &kp CH_X &kp CH_C &kp CH_V &kp CH_B    &kp CH_N &kp CH_M &kp CH_COMMA &kp CH_DOT &kp CH_SLASH &tog GAMING
+                                      &mo NUMBERS &kp LSHIFT &kp BACKSPACE          &mo SYMBOLS &shift_space &kp ENTER
             >;
         };
 
         numbers {
             display-name = "NUMBERS";
             bindings = <
-<<<<<<< HEAD
-<<<<<<< HEAD
-                &none  &none &none &none &none &none                         &kp RA(N7) &kp LS(N6) &kp RA(N3) &kp LS(GRAVE) &kp GRAVE &none
-                &none  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-                &none  &kp LS(N1) &kp SLASH &kp LS(N3) &kp LS(N7) &kp LS(N0)   &kp LS(QUOTE) &kp LS(RBRC) &kp COMMA &kp DOT &none &none
-                                          &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
-=======
-                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEGR &kp CH_SECT &none
-                &none  &kp CH_1 &kp CH_2 &mt LALT CH_3 &mt LCTRL CH_4 &kp CH_5      &kp CH_6 &mt LCTRL CH_7 &mt LALT CH_8 &kp CH_9 &kp CH_0 &none
-                &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &none &none
-                                  &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
->>>>>>> parent of 2c80b99 (v3.2.93)
-=======
-                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEGR &kp CH_SECT &none
-                &none  &kp CH_1 &kp CH_2 &kp CH_3 &kp CH_4 &kp CH_5      &kp CH_6 &kp CH_7 &kp CH_8 &kp CH_9 &kp CH_0 &none
-                &none  &kp CH_PLUS &kp CH_MINS &kp CH_ASTR &kp CH_SLSH &kp CH_EQL   &kp CH_QUES &kp CH_EXLM &kp CH_COMM &kp CH_DOT &none &none
-                                  &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
->>>>>>> parent of 432d38d (v3.9 Test)
+                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPS &kp CH_HASH &kp CH_DEGREE &kp CH_SECT &none
+                &none  &kp CH_N1 &kp CH_N2 &kp CH_N3 &kp CH_N4 &kp CH_N5                 &kp CH_N6 &kp CH_N7 &kp CH_N8 &kp CH_N9 &kp CH_N0 &none
+                &none  &kp CH_PLUS &kp CH_MINUS &kp CH_ASTRK &kp CH_SLASH &kp CH_EQUAL   &kp CH_QUESTION &kp CH_EXCLAMATION &kp CH_COMMA &kp CH_DOT &none &none
+                                      &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
             >;
         };
 
         aeoue {
             display-name = "ÄÖÜ";
             bindings = <
-                &bt BT_CLR_ALL  &bt BT_CLR &none &none &bt BT_NXT  &none                        &none &none &none &none &none &none
-                &none  &kp CH_DQUO &kp CH_UDIA &kp CH_ODIA &kp CH_ADIA      &none &none &trans &trans &none &none &none
-                &none  &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                     &none &none &none &none &none &none
+                &bt BT_CLR_ALL  &bt BT_CLR &none &none &bt BT_NXT  &none                         &none &none &none &none &none &none
+                &none  &kp CH_DOUBLE_QUOTES &kp CH_U_UMLAUT &kp CH_O_UMLAUT &kp CH_A_UMLAUT    &none &none &trans &trans &none &none &none
+                &none  &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4     &none &none &none &none &none &none
                             &none &kp LSHIFT &kp LCTRL                          &kp LALT &kp SPACE &kp RALT
             >;
         };
@@ -205,7 +191,7 @@
             bindings = <
                 &none  &none &none &none &none &none            &kp CH_AT &none &none &none &none &none
                 &none  &none &kp TAB &trans &trans &none        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TAB &none
-                &none  &none &none &none &none &none &none      &none &none &none &none &none
+                &none  &none &none &none &none &none            &none &none &none &none &none &none
                             &none &kp LSHIFT &kp LCTRL              &kp LALT &kp SPACE &kp RALT
             >;
         };
@@ -213,9 +199,9 @@
         symbols {
             display-name = "SYMBOLS";
             bindings = <
-                &none  &kp CH_TILD &kp CH_BSLS &kp CH_AT &kp CH_PERC &kp CH_SECT    &none &none &none &none &none &none
-                &none  &kp CH_LABK &kp CH_LBRC &kp CH_LCBR &kp CH_LPRN &kp CH_DQUO      &kp CH_QUOT &kp CH_RPRN &kp CH_RCBR &kp CH_RBRC &kp CH_RABK &none
-                &none  &none &kp CH_UNDS &none &none &none                              &none &none &none &none &none &none
+                &none  &kp CH_TILDE &kp CH_BSLH &kp CH_AT &kp CH_PERCENT &kp CH_SECT    &none &none &none &none &none &none
+                &none  &kp CH_LESS_THAN &kp CH_LBKT &kp CH_LBRC &kp CH_LPAR &kp CH_DOUBLE_QUOTES    &kp CH_SINGLE_QUOTE &kp CH_RPAR &kp CH_RBRC &kp CH_RBKT &kp CH_GREATER_THAN &none
+                &none  &none &kp CH_UNDERSCORE &none &none &none                       &none &none &none &none &none &none
                                 &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
             >;
         };
@@ -224,8 +210,8 @@
             display-name = "GAMING";
             bindings = <
                 &kp ESC &kp CH_Q &kp CH_W &kp CH_E &kp CH_R &kp CH_T   &kp CH_Z &kp CH_U &kp CH_I &kp CH_O &kp CH_P &trans
-                &kp TAB &kp CH_A &kp CH_S &kp CH_D &kp CH_F &kp CH_G   &kp CH_H &kp CH_J &kp CH_K &kp CH_L &kp CH_SCLN &none
-                &none &kp CH_Y &kp CH_X &kp CH_C &kp CH_V &kp CH_B     &kp CH_N &kp CH_M &kp CH_COMM &kp CH_DOT &kp CH_SLSH &trans
+                &kp TAB &kp CH_A &kp CH_S &kp CH_D &kp CH_F &kp CH_G   &kp CH_H &kp CH_J &kp CH_K &kp CH_L &kp CH_SEMICOLON &none
+                &none &kp CH_Y &kp CH_X &kp CH_C &kp CH_V &kp CH_B     &kp CH_N &kp CH_M &kp CH_COMMA &kp CH_DOT &kp CH_SLASH &trans
                                 &kp ENTER &kp LSHIFT &kp SPACE            &kp LALT &kp LCTRL &kp ENTER
             >;
         };
