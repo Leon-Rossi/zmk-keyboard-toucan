@@ -169,10 +169,17 @@
         numbers {
             display-name = "NUMBERS";
             bindings = <
+<<<<<<< HEAD
                 &none  &none &none &none &none &none                         &kp RA(N7) &kp LS(N6) &kp RA(N3) &kp LS(GRAVE) &kp GRAVE &none
                 &none  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
                 &none  &kp LS(N1) &kp SLASH &kp LS(N3) &kp LS(N7) &kp LS(N0)   &kp LS(QUOTE) &kp LS(RBRC) &kp COMMA &kp DOT &none &none
                                           &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
+=======
+                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPR &kp CH_HASH &kp CH_DEGR &kp CH_SECT &none
+                &none  &kp CH_1 &kp CH_2 &mt LALT CH_3 &mt LCTRL CH_4 &kp CH_5      &kp CH_6 &mt LCTRL CH_7 &mt LALT CH_8 &kp CH_9 &kp CH_0 &none
+                &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &none &none
+                                  &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
+>>>>>>> parent of 2c80b99 (v3.2.93)
             >;
         };
 
@@ -191,7 +198,7 @@
             bindings = <
                 &none  &none &none &none &none &none            &kp RA(N2) &none &none &none &none &none
                 &none  &none &kp TAB &trans &trans &none        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TAB &none
-                &none  &none &none &none &none &none            &none &none &none &none &none &none
+                &none  &none &none &none &none &none &none      &none &none &none &none &none
                             &none &kp LSHIFT &kp LCTRL              &kp LALT &kp SPACE &kp RALT
             >;
         };
