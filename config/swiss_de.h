@@ -94,4 +94,5 @@
 #define CH_RBRC RA(RBRC)    // ]
 #define CH_LCBR RA(QUOTE)    // {
 #define CH_RCBR RA(NUHS)     // }
-#define CH_BSLS RA(NUBS)    // \
+#define CH_BSLS RA(NUBS)    // backslash
+                            //
