@@ -199,7 +199,7 @@
         symbols {
             display-name = "SYMBOLS";
             bindings = <
-                &none  &kp CH_TILDE &kp CH_SECT &kp CH_AT &kp CH_PERCENT &kp CH_BROKEN_PIPE    &none &none &none &none &none &none
+                &none  &kp CH_TILDE &kp CH_SECT &kp CH_AT &kp CH_PERCENT &kp CH_BROKEN_BAR    &none &none &none &none &none &none
                 &none  &kp CH_LESS_THAN &kp CH_LBKT &kp CH_LBRC &kp CH_LPAR &kp CH_DOUBLE_QUOTES    &kp CH_SINGLE_QUOTE &kp CH_RPAR &kp CH_RBRC &kp CH_RBKT &kp CH_GREATER_THAN &none
                 &none  &none &kp CH_UNDERSCORE &none &kp CH_BSLH &none                       &none &none &none &none &none &none
                                 &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
