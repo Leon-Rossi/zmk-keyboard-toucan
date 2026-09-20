@@ -169,7 +169,7 @@
         numbers {
             display-name = "NUMBERS";
             bindings = <
-                &none  &none &none &none &none &none                                    &kp CH_BROKEN_BAR &kp CH_AMPS &kp CH_HASH &kp CH_DEGREE &kp CH_CARET &CH_DOLLAR
+                &none  &none &none &none &none &none                                    &kp CH_BROKEN_BAR &kp CH_AMPS &kp CH_HASH &kp CH_DEGREE &kp CH_CARET &kp CH_DOLLAR
                 &none  &kp CH_N1 &kp CH_N2 &kp CH_N3 &kp CH_N4 &kp CH_N5                 &kp CH_N6 &kp CH_N7 &kp CH_N8 &kp CH_N9 &kp CH_N0 &none
                 &none  &kp CH_PLUS &kp CH_MINUS &kp CH_ASTERISK &kp CH_SLASH &kp CH_EQUAL   &kp CH_QUESTION &kp CH_EXCLAMATION &kp CH_COMMA &kp CH_DOT &none &none
                                       &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
