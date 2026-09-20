@@ -169,7 +169,7 @@
         numbers {
             display-name = "NUMBERS";
             bindings = <
-                &none  &none &none &none &none &none                                    &kp CH_PIPE &kp CH_AMPS &kp CH_HASH &kp CH_DEGREE &kp CH_CARET &none
+                &none  &none &none &none &none &none                                    &kp CH_BROKEN_BAR &kp CH_AMPS &kp CH_HASH &kp CH_DEGREE &kp CH_CARET &CH_DOLLAR
                 &none  &kp CH_N1 &kp CH_N2 &kp CH_N3 &kp CH_N4 &kp CH_N5                 &kp CH_N6 &kp CH_N7 &kp CH_N8 &kp CH_N9 &kp CH_N0 &none
                 &none  &kp CH_PLUS &kp CH_MINUS &kp CH_ASTERISK &kp CH_SLASH &kp CH_EQUAL   &kp CH_QUESTION &kp CH_EXCLAMATION &kp CH_COMMA &kp CH_DOT &none &none
                                       &trans &kp LSHIFT &kp BACKSPACE                       &kp TAB &kp SPACE &kp ENTER
@@ -199,7 +199,7 @@
         symbols {
             display-name = "SYMBOLS";
             bindings = <
-                &none  &kp CH_TILDE &kp CH_SECT &kp CH_AT &kp CH_PERCENT &kp CH_BROKEN_BAR    &none &none &none &none &none &none
+                &none  &kp CH_TILDE &kp CH_SECT &kp CH_AT &kp CH_PERCENT &kp CH_PIPE    &none &none &none &none &none &none
                 &none  &kp CH_LESS_THAN &kp CH_LBKT &kp CH_LBRC &kp CH_LPAR &kp CH_DOUBLE_QUOTES    &kp CH_SINGLE_QUOTE &kp CH_RPAR &kp CH_RBRC &kp CH_RBKT &kp CH_GREATER_THAN &none
                 &none  &none &kp CH_UNDERSCORE &none &kp CH_BSLH &none                       &none &none &none &none &none &none
                                 &kp TAB &kp LSHIFT &kp LCTRL                                  &trans &kp SPACE &none
